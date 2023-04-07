@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
-# This code is for debugging Nginx to ensure that the service is not running
-# The first step is to modify the Nginx configuration file to replace the port number 8080 with 80
+
 sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-# After making the necessary changes to the configuration file, the Nginx service is restarted
-service nginx restart
-# Finally, any other running instances of the Nginx process are killed to ensure a clean restart
-pkill -o nginx
+service nginx stop
+nginx
