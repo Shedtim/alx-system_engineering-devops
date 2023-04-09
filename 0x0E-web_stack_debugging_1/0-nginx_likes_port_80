@@ -5,4 +5,3 @@ Solution: remove the existing ../sites-enabled/default and create a symbolic lin
 Note: the -s flag creates a symbolic link, while -f deletes the existing file and replaces it.
 sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
-
